@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <canvas id="categoryChart" width="400" height="400"></canvas>
+
+
+</head>
+<body>
+    <!-- NAVBAR -->
+     <nav class = "navbar">
+        <div class = "logo">Expense Tracker</div>
+        <ul class = "navlinks">
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "expenses.html">Expense</a></li>
+            <li><a href = "#feedback">Feedback</a></li>
+        </ul>
+        <!-- Dark Mode Toggle Icon -->
+        <div class="dark-mode-toggle">
+            <i id="dark-mode-toggle" class="fas fa-moon"></i>
+        </div>
+     </nav>
+     <!-- Hero Section -->
+      <section class = "hero">
+        <div class = "herocontent">
+            <h1>Track Your Expenses Smartly</h1>
+            <p>Manage your spendings, reach your savings goals.</p>
+            <a href = "expenses.html" class = "btn">Start Tracking</a>
+        </div>
+        <img src = "images/expense.png" alt = "Finance Illustrations" class = "img">
+      </section>
+      <!-- Flashcards Section -->
+       <section class = "flashcards">
+        <h2>What You Can Do</h2>
+        <div class = "card-container">
+            <div class = "card">
+                <img src = "images/wallet.png" alt = "Add Expenses">
+                <h3>Add Expenses</h3>
+                <p>Quickly add your daily expenses and categorise them for better tracking.</p>
+            </div>
+            <div class = "card">
+                <img src = "images/delete.png" alt = "Add Expenses">
+                <h3>Delete Expenses</h3>
+                <p>Easily remove unnecessary or incorrect entries anytime.</p>
+            </div>
+            <div class="card">
+                <img src="images/pencil.png" alt="Modify Expense">
+                <h3>Modify Expense</h3>
+                <p>Edit and update your expenses when needed with full flexibility.</p>
+              </div>
+        </div>
+       </section>
+</body>
+</html>

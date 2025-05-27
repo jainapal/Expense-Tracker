@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class = "navbar">
+        <div class = "logo">Expense Tracker</div>
+        <ul class = "navlinks">
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "expenses.html">Expense</a></li>
+            <li><a href = "#feedback">Feedback</a></li>
+        </ul>
+        <!-- Dark Mode Toggle Icon -->
+        <div class="dark-mode-toggle">
+            <i id="dark-mode-toggle" class="fas fa-moon"></i>
+        </div>
+     </nav>
+     <!-- Expense Form -->
+      <section class = "expense-form-section">
+        <h2>Add New Expense</h2>
+        <form id = "expense-form">
+            <input type ="text" id ="title" placeholder="Expense Title" required />
+            <input type ="number" id ="amount" placeholder="Amount" required />
+            <input type ="date" id ="date" required />
+            <select id ="category" required>
+                <option value ="" disabled selected>Select Category</option>
+                <option value ="Food">Food</option>
+                <option value ="Transport">Transport</option>
+                <option value ="Bills">Bills</option>
+                <option value ="Shopping">Shopping</option>
+                <option value ="Others">Others</option>
+            </select>
+            <button type="submit">Add Expense</button>
+        </form>
+      </section>
+
+      <!-- Category Search dropdown -->
+      <label for="filter-category">Filter by Category:</label>
+      <select id="filter-category">
+        <option value="">All</option>  <!-- Default: sab dikhao -->
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Others">Others</option>
+        <!-- apni categories yahan daalte ja sakte ho -->
+      </select>
+
+      <!-- Buttons For sorting -->
+      <div>
+        <button id="sort-amount-asc">Sort by Amount (Asc)</button>
+        <button id="sort-amount-desc">Sort by Amount (Desc)</button>
+      </div>
+      <div>
+        <button id="sort-date-asc">Sort by Date (Asc)</button>
+        <button id="sort-date-desc">Sort by Date (Desc)</button>
+      </div>
+      
+
+      <!-- Expense List -->
+       <section class ="expense-list-section">
+        <h2>Your Expenses</h2>
+        <table id ="expense-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Expense added here dynamicyally with javascript -->
+            </tbody>
+        </table>
+       </section>
+
+       <!-- Summary Section -->
+        <section class ="summary">
+            <h2>Expense Summary</h2>
+            <div class ="summary-box">
+                <div id="category-summary">
+                    <canvas id="categoryPieChart" width="400" height="400"></canvas>
+                </div>
+                <div class ="total">
+                    <p>Total: ₹<span id="totalAmount">0</span> </p>
+                </div>
+            </div>
+        </section>
+
+        
+
+
+
+
+
+
+
+
+
+
+        <script src="script.js"></script>
+
+</body>
+</html>

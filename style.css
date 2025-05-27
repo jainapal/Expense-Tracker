@@ -1,0 +1,355 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+/* Navbar */
+.navbar{
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h1{
+    font-size: 1.5rem;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for the body */
+  color: #e0e0e0; /* Light text for readability */
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .navbar {
+  background-color: #1f1f1f; /* Slightly lighter dark background */
+}
+/* Dark Mode Toggle Icon Positioning */
+.dark-mode-toggle {
+  position: fixed;  /* Fixed position to keep it at one place */
+  top: 1rem;  /* 1rem from the top */
+  right: 1rem;  /* 1rem from the right */
+  z-index: 1000;  /* To ensure it's on top of other elements */
+  cursor: pointer;
+}
+/* Dark Mode Navbar Links */
+body.dark-mode .navbar a {
+  color: #e0e0e0; /* Light color for navbar links */
+}
+
+/* Dark Mode Navbar Link Hover */
+body.dark-mode .navbar a:hover {
+  color: #ffcc00; /* Bright color on hover for visibility */
+  text-decoration: underline;
+}
+/* Dark Mode Toggle Icon */
+.dark-mode-toggle i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Dark Mode Toggle Icon in Dark Mode */
+body.dark-mode .dark-mode-toggle i {
+  color: #ffcc00; /* Golden color for icon in dark mode */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .navbar h1 {
+      margin-bottom: 0.5rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+    }
+  
+    .nav-links li {
+      width: 100%;
+    }
+  
+    .nav-links li a {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+  }
+/* Hero Section   */
+.hero{
+  /*background: url('https://source.unsplash.com/1600x500/?money,finance') no-repeat center center/cover; */
+  padding: 4rem 2rem;
+  color: black;
+  text-align: center;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero img{
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 100%;
+}
+/* Flash cards */
+.flashcards {
+    display: flex;
+    justify-content: center; /* Horizontally space out the cards */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+  
+.card p {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+.card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+.card img{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+    .flashcards {
+      justify-content: center; /* Center alignment for small screens */
+      flex-direction: column; /* Stack cards vertically */
+    }
+  
+    .flashcard {
+      width: 90%; /* Cards take up 90% width on mobile */
+      margin-bottom: 1rem;
+    }
+  }
+  /* Expense form */
+  .expense-form-section {
+    padding: 2rem;
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .expense-form-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  #expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #expense-form input,
+  #expense-form select,
+  #expense-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease;
+  }
+  #expense-form input:focus,
+  #expense-form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  #expense-form button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #expense-form button:hover {
+    background-color: #0056b3;
+  }
+  /* Expense List */
+  .expense-list-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .expense-list-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  /* Styling for the table */
+  #expense-table {
+    width: 100%;
+    border-collapse: collapse;  /* Removes gaps between borders */
+    overflow-x: auto;
+  }
+  
+  #expense-table th,
+  #expense-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  #expense-table th {
+    background-color: #007bff; /* Blue header */
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  #expense-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  /* Optional: Responsive Table */
+@media (max-width: 768px) {
+  .expense-list-section {
+    overflow-x: auto; /* Jab table bada hoga screen se, toh scroll aayega */
+  }
+
+  #expense-table {
+    min-width: 600px; 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  
+  #expense-table th,td {
+    padding-left: 10px;
+    text-align: left;
+  }
+  
+}
+/* Delete Button */
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ff1a1a;
+}
+/* Edit Button */
+.edit-btn {
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px; /* thoda gap between Edit and Delete */
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Summary Section Styling */
+.summary {
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.summary h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+.summary-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.summary-box canvas {
+  max-width: 300px;
+  width: 100%;
+}
+.total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d2d2d;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .summary-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .total {
+    font-size: 1.2rem;
+  }
+}
+  
+  
+  
