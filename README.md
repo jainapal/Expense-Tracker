@@ -24,9 +24,9 @@ A clean and functional expense tracker web application built using **HTML**, **C
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
+- HTML
+- CSS
+- JavaScript
 - Browser Local Storage
 
 ---
